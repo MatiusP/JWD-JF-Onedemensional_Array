@@ -2,7 +2,8 @@ package by.epamtc.protsko.array.task03;
 
 public class Task_01 {
 
-    public static double getMaxSum(double[] array) {
+    public static double maxSum(double[] array) {
+
         double maxSum = 0;
         if (array.length > 2) {
             maxSum = array[0] + array[array.length - 1];
@@ -13,10 +14,10 @@ public class Task_01 {
                 }
             }
             return maxSum;
-        } else {
-            System.out.println("Cannot find the result for the transmitted sequence of numbers");
-            return maxSum;
         }
+
+        System.out.println("Cannot find the result for the transmitted sequence of numbers");
+        return maxSum;
     }
 
     //----- check result -----
@@ -26,9 +27,9 @@ public class Task_01 {
         double[] array2 = {1, 5, 2, 4, 20, 3, 8, 0, 3};
         double[] array3 = {10};
 
-        System.out.println(getMaxSum(array));
-        System.out.println(getMaxSum(array1));
-        System.out.println(getMaxSum(array2));
-        System.out.println(getMaxSum(array3));
+        System.out.println(maxSum(array));
+        System.out.println(maxSum(array1));
+        System.out.println(maxSum(array2));
+        System.out.println(maxSum(array3));
     }
 }

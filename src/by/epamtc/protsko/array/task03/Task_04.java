@@ -2,7 +2,7 @@ package by.epamtc.protsko.array.task03;
 
 public class Task_04 {
 
-    private static int[] getFrequencyOfOccurrenceElements(int[] array) {
+    private static int[] frequencyOfOccurrenceElements(int[] array) {
         int[] arrayOfFrequencyOccurrenceElements = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
@@ -17,8 +17,8 @@ public class Task_04 {
         return arrayOfFrequencyOccurrenceElements;
     }
 
-    public static int getMostFrequencyElement(int[] array) {
-        int[] arrayOfFrequencyOccurrenceElements = getFrequencyOfOccurrenceElements(array);
+    public static int mostFrequencyElement(int[] array) {
+        int[] arrayOfFrequencyOccurrenceElements = frequencyOfOccurrenceElements(array);
         int maxFrequency = arrayOfFrequencyOccurrenceElements[0];
         int countMaxFrequencyOccurrenceElements = 0;
 
@@ -59,8 +59,8 @@ public class Task_04 {
         int[] array1 = {1, 1, -1, -1, -1, 3, 3, -5, -5, -5, 7};
         int[] array2 = {1, 0};
 
-        System.out.println("Minimum element of the most common = " + getMostFrequencyElement(array));
-        System.out.println("Minimum element of the most common = " + getMostFrequencyElement(array1));
-        System.out.println("Minimum element of the most common = " + getMostFrequencyElement(array2));
+        System.out.println("Minimum element from the most common = " + mostFrequencyElement(array));
+        System.out.println("Minimum element from the most common = " + mostFrequencyElement(array1));
+        System.out.println("Minimum element from the most common = " + mostFrequencyElement(array2));
     }
 }

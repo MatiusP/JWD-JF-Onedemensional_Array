@@ -5,27 +5,27 @@ import java.util.Arrays;
 public class Task_02 {
     private static int countOfMinimumElements;
 
-    private static int getMinArrayElement(int[] array) {
+    private static int minArrayElement(int[] array) {
         countOfMinimumElements = 0;
-        int minArrayElement = array[0];
+        int minElement = array[0];
 
         for (int element : array) {
-            if (element < minArrayElement) {
-                minArrayElement = element;
+            if (element < minElement) {
+                minElement = element;
                 countOfMinimumElements = 1;
-            } else if (element == minArrayElement) {
+            } else if (element == minElement) {
                 countOfMinimumElements++;
             }
         }
-        return minArrayElement;
+        return minElement;
     }
 
 
-    public static int[] getNewArrayWithoutMinElements(int[] array) {
+    public static int[] arrayWithoutMinElements(int[] array) {
         int[] newArray;
 
         if (array.length > 1) {
-            int minArrayElement = getMinArrayElement(array);
+            int minArrayElement = minArrayElement(array);
             newArray = new int[array.length - countOfMinimumElements];
             int indexElementNewArray = 0;
 
@@ -50,8 +50,8 @@ public class Task_02 {
         int[] array2 = {-10, 5, 10, -10, -10, -10, -5};
         int[] array3 = {-10};
 
-        System.out.println(Arrays.toString(getNewArrayWithoutMinElements(array1)));
-        System.out.println(Arrays.toString(getNewArrayWithoutMinElements(array2)));
-        System.out.println(Arrays.toString(getNewArrayWithoutMinElements(array3)));
+        System.out.println(Arrays.toString(arrayWithoutMinElements(array1)));
+        System.out.println(Arrays.toString(arrayWithoutMinElements(array2)));
+        System.out.println(Arrays.toString(arrayWithoutMinElements(array3)));
     }
 }

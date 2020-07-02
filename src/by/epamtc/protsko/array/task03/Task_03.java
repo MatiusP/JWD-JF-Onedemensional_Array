@@ -41,7 +41,7 @@ public class Task_03 {
     }
 
 
-    public static int[] getLockCode(int[] startCodeSequence) {
+    public static int[] lockCode(int[] startCodeSequence) {
         int[] lockCode = {};
         if (isInputCombinationValid(startCodeSequence)) {
             lockCode = startCodeSequence;
@@ -78,10 +78,11 @@ public class Task_03 {
                 }
             }
             return lockCode;
-        } else {
-            System.out.println("Invalid input combination. It's impossible to get the lock code!");
-            return lockCode;
         }
+
+        System.out.println("Invalid input combination. It's impossible to get the lock code!");
+        return lockCode;
+
     }
 
     //----- check result -----
@@ -97,12 +98,12 @@ public class Task_03 {
 //        int[] sequence10 = {5, 0, 0, 0, 0, 0, 0, 0, 0, 6};
 //        int[] sequence11 = {8, -6, 0, 0, 0, 0, 0, 0, 0, 0};
 
-        System.out.println(Arrays.toString(getLockCode(sequence1)));
-        System.out.println(Arrays.toString(getLockCode(sequence2)));
-        System.out.println(Arrays.toString(getLockCode(sequence3)));
-        System.out.println(Arrays.toString(getLockCode(sequence5)));
-        System.out.println(Arrays.toString(getLockCode(sequence6)));
-        System.out.println(Arrays.toString(getLockCode(sequence7)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence1)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence2)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence3)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence5)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence6)));
+        System.out.println("Lock code: " + Arrays.toString(lockCode(sequence7)));
 //        System.out.println(Arrays.toString(getLockCode(sequence8)));
 //        System.out.println(Arrays.toString(getLockCode(sequence9)));
 //        System.out.println(Arrays.toString(getLockCode(sequence10)));
